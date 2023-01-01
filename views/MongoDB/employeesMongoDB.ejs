@@ -1,0 +1,46 @@
+<head>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Employees MongoDB</h1>
+
+    <br>
+
+    <a href="/employeesMongoDB/addEmployee">Add Employee (MongoDB)</a>
+
+    <!-- Creates table containing following information -->
+    <table>
+        <tr>
+            <th>EID</th>
+            <th>Phone</th>
+            <th>Email</th>
+        </tr>
+        <% for (let i=0; i < employees.length; i++) { %>
+            <tr>
+                <td>
+                    <%= employees[i]._id %>
+                </td>
+                <td>
+                    <%= employees[i].phone %>
+                </td>
+                <td>
+                    <%= employees[i].email %>
+                </td>
+            </tr>
+            <% } %>
+    </table>
+
+    <a href="/">Home</a>
+</body>

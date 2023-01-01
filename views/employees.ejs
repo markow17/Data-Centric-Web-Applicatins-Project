@@ -1,0 +1,54 @@
+<head>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Employees</h1>
+
+        <br />
+
+        <table>
+            <tr>
+                <th>EID</th>
+                <th>Name</th>
+                <th>Role</th>
+                <th>Salary</th>
+                <th>Update</th>
+            </tr>
+
+            <% for(let e of employees) {%>
+            <tr>
+                <td>
+                    <%= e.eid %>
+                </td>
+                <td>
+                    <%= e.ename %>
+                </td>
+                <td>
+                    <%= e.role %>
+                </td>
+                <td>
+                    <%= e.salary %>
+                </td>
+                <td>
+                    <a href="/employees/edit/<%= e.eid %>">Update</a>
+                </td>
+            </tr>
+            <% }%>
+
+        </table>
+        <br>
+        <a href="/">Home</a>
+    </div>
+</body>
